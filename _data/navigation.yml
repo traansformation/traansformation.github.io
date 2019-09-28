@@ -1,0 +1,14 @@
+- name: Home
+  link: /
+- name: Profile
+  link: /profile.html
+- name: Projects
+  link: /projects.html
+- name: Publication
+  link: /publication.html
+- name: Testimonials
+  link: /testimonials.html
+- name: Careers
+  link: /careers.html
+- name: Contact Us
+  link: /contact-us.html

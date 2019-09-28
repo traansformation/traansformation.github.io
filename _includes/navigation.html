@@ -1,0 +1,13 @@
+<div class="menu">
+    	<div id="showMenu"><img src="/assets/images/menu-alt.png" alt="" /></div>        
+</div>
+
+<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-right" id="cbp-spmenu">
+    <div class="close">
+        <a class="scroll" href="#home"><img src="/assets/images/ico_close.png" alt="" /></a>
+    </div>
+    
+    {% for item in site.data.navigation %}
+       <a href="{{ item.link }}" {% if page.url == item.link %}class="current"{% endif %}>{{ item.name }}</a>
+    {% endfor %}
+</nav>
