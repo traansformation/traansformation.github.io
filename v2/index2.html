@@ -170,6 +170,11 @@ textarea{min-height:96px;resize:vertical}
 #msg{grid-column:1/-1;font-size:.95rem;min-height:1.4em}
 @media(max-width:860px){.contact .wrap{grid-template-columns:1fr;gap:36px}form{grid-template-columns:1fr;padding:24px}}
 
+.social{display:flex;gap:22px;align-items:center}
+.social a{color:var(--gold-soft);border-bottom:1px solid transparent;transition:border-color .2s}
+.social a:hover{border-color:var(--gold-soft)}
+.follow{margin-top:26px;color:var(--muted);font-size:.98rem}
+.follow a{color:var(--gold-deep);margin:0 0 0 14px;display:inline;font-size:inherit}
 footer{background:var(--ink);color:#D9CFB0;padding:40px 0;font-size:.9rem}
 footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 .wa{position:fixed;right:18px;bottom:18px;z-index:40;background:var(--green-deep);color:#fff;padding:13px 22px;border-radius:40px;font-size:.95rem}
@@ -300,6 +305,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <p>Share a few details and we will call or WhatsApp you with the next step. The consultation is free.</p>
       <a href="tel:+919136315733">+91 91363 15733</a>
       <a href="mailto:traansformation@gmail.com">traansformation@gmail.com</a>
+      <p class="follow">Follow our latest work<a href="https://www.instagram.com/traansformationdesign" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/share/19ZLdd9363/" target="_blank" rel="noopener">Facebook</a></p>
     </div>
     <form id="lead" novalidate>
       <label>Name<input name="name" required autocomplete="name"></label>
@@ -319,7 +325,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   </div>
 </section>
 
-<footer><div class="wrap"><span>&copy; Traansformation Design Studio</span><span>Office 18, Ajit Shopping Centre, L.B.S. Marg, Thane (W) 400602</span></div></footer>
+<footer><div class="wrap"><span>&copy; Traansformation Design Studio</span><span class="social"><a href="https://www.instagram.com/traansformationdesign" target="_blank" rel="noopener">Instagram</a><a href="https://www.facebook.com/share/19ZLdd9363/" target="_blank" rel="noopener">Facebook</a></span><span>Office 18, Ajit Shopping Centre, L.B.S. Marg, Thane (W) 400602</span></div></footer>
 <a class="wa" href="https://wa.me/919136315733?text=Hi%20Traansformation%2C%20I%20would%20like%20to%20discuss%20an%20interior%20design%20project." target="_blank" rel="noopener">WhatsApp us</a>
 
 <!-- Lightbox: full image, centred -->
