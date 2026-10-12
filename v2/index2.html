@@ -98,6 +98,20 @@ header.solid nav .call{background:var(--gold);color:var(--ink)}
 .duo img{width:100%;height:100%;object-fit:cover}
 @media(max-width:700px){.duo{grid-template-columns:1fr}}
 .tile.wide{column-span:none}
+/* films */
+.films{background:var(--cream)}
+.reel{display:grid;grid-template-columns:2.2fr 1fr;gap:24px;margin-top:44px;align-items:center}
+.vid{position:relative;display:block;width:100%;border:0;padding:0;background:var(--green) center/cover no-repeat;cursor:pointer;overflow:hidden;border:1px solid var(--gold-soft)}
+.vid.land{aspect-ratio:16/9}.vid.tall{aspect-ratio:9/16;max-height:620px;margin:0 auto}
+.vid::before{content:"";position:absolute;inset:0;background:rgba(46,38,21,.28);transition:background .3s}
+.vid:hover::before{background:rgba(46,38,21,.1)}
+.vid i{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:var(--gold);display:grid;place-items:center}
+.vid i::after{content:"";border-left:20px solid var(--ink);border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:6px}
+.vid iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.vid em{position:absolute;left:16px;bottom:12px;z-index:2;color:#fff;font-style:normal;font-family:var(--serif);font-size:1.25rem}
+.films .more{margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.films .more a.btn.line{color:var(--ink)}
+@media(max-width:800px){.reel{grid-template-columns:1fr}.vid.tall{max-width:300px}}
 /* lightbox */
 .lb{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;align-items:center;justify-content:center;background:rgba(36,29,15,.96);padding:20px}
 .lb.open{display:flex}
@@ -158,7 +172,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 <header id="top">
   <a class="logo" href="#top">Traansformation<small>Design Studio</small></a>
   <nav>
-    <a href="#projects">Projects</a><a href="#services">Services</a><a href="#process">Process</a><a href="#consultation">Consultation</a>
+    <a href="#films">Films</a><a href="#projects">Projects</a><a href="#services">Services</a><a href="#process">Process</a><a href="#consultation">Consultation</a>
     <a class="call" href="tel:+919136315733">Call studio</a>
   </nav>
 </header>
@@ -176,7 +190,7 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
     <p>Bespoke interiors and turnkey execution for homes and workspaces across Thane and Mumbai, led by the designers themselves.</p>
     <div class="cta">
       <a class="btn gold" href="#consultation">Book a free consultation</a>
-      <a class="btn line" href="#projects">View our projects</a>
+      <a class="btn line" href="#films">Watch our work</a>
     </div>
   </div>
   <div class="facts"><span>10+ years of practice</span><span>Design to handover</span><span>Vastu-aware planning</span></div>
@@ -186,6 +200,20 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
   <div class="wrap">
     <h2>A calmer way to get a beautiful home built.</h2>
     <p>A great interior needs more than good pictures. It needs a clear brief, honest material choices, tight site coordination and finishes that last through daily life. We handle all of it under one accountable team, so you always know what is happening and what it costs.</p>
+  </div>
+</section>
+
+<section class="films" id="films">
+  <div class="wrap">
+    <h2>See the studio's work in motion.</h2>
+    <div class="reel">
+      <button class="vid land" data-yt="OEMjysZSOs4" style="background-image:url(https://i.ytimg.com/vi/OEMjysZSOs4/hqdefault.jpg)" aria-label="Play project film"><i></i><em>Project walkthrough</em></button>
+      <button class="vid tall" data-yt="EN86CJnj2G8" style="background-image:url(https://i.ytimg.com/vi/EN86CJnj2G8/hqdefault.jpg)" aria-label="Play short project video"><i></i><em>Quick look</em></button>
+    </div>
+    <div class="more">
+      <a class="btn gold" href="#consultation">Book a free consultation</a>
+      <a class="btn line" href="https://www.youtube.com/@traansformation" target="_blank" rel="noopener">More films on YouTube</a>
+    </div>
   </div>
 </section>
 
@@ -307,11 +335,11 @@ addEventListener('scroll',onScroll,{passive:true});onScroll();
 var DATA=[
  ['01-dosti.jpg','Dosti Residence','Bedroom with custom wall art and upholstered bed','Bedrooms'],
  ['03-luxe-elegance-thane.jpg','Where Luxe Meets Elegance','Luxury bathroom with glass shower and stone finishes','Kitchens & bathrooms'],
- ['02-serene-apartment-goregaon.jpg','The Serene Apartment','Goregaon apartment bedroom with custom headboard','Bedrooms'],
  ['05-wadhwa-courtyard.jpg','Wadhwa Courtyard','Bedroom with arched wall detail','Bedrooms'],
  ['04-tranquil-apartment-thane.jpg','The Tranquil Apartment','Modern kitchen with warm under-cabinet lighting','Kitchens & bathrooms'],
- ['06-lakshmi-shrushti.jpg','Lakshmi Shrushti','Bedroom with custom wardrobe','Bedrooms'],
+ ['02-serene-apartment-goregaon.jpg','The Serene Apartment','Goregaon apartment bedroom with custom headboard','Bedrooms'],
  ['07-atmosphere-mulund.jpg','Atmosphere, Mulund','Mulund bedroom with textured wall and mirror panel','Bedrooms'],
+ ['06-lakshmi-shrushti.jpg','Lakshmi Shrushti','Bedroom with custom wardrobe','Bedrooms'],
  ['08-rustic-kingdom.jpg','The Rustic Kingdom','Rustic bedroom with layered textiles','Bedrooms']
 ]; /* To add a project: upload the photo to assets/projects/ and add one line here. */
 var tiles=[],lb=document.getElementById('lb'),
@@ -338,6 +366,12 @@ lb.querySelector('.next').onclick=function(){show(cur+1)};
 lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('shield'))close()});
 addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
   if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+
+/* video facades: load YouTube only on click */
+[].forEach.call(document.querySelectorAll('.vid'),function(b){b.addEventListener('click',function(){
+  var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+b.dataset.yt+'?autoplay=1&rel=0&modestbranding=1';
+  f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;f.title='Traansformation video';
+  b.innerHTML='';b.appendChild(f)})});
 
 /* enquiry form */
 document.getElementById('lead').addEventListener('submit',function(e){
