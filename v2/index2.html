@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premium Interior Designer in Thane and Mumbai | Traansformation Design Studio</title>
+<meta name="description" content="Traansformation Design Studio creates premium residential, commercial, and turnkey interiors across Thane and Mumbai. Book a free design consultation.">
+<meta property="og:image" content="assets/projects/01-dosti.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FBF7EC; --cream-2:#F3ECD9;
+  --gold:#C39A33; --gold-deep:#8A6812; --gold-soft:#E6D199;
+  --green:#DDE8CE; --green-deep:#6F8754;
+  --ink:#2E2615; --muted:#6B604A;
+  --serif:'Cormorant Garamond',Georgia,'Times New Roman',serif;
+  --sans:'Jost',system-ui,-apple-system,'Segoe UI',Arial,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px}
+body{background:var(--cream);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.7}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.12;letter-spacing:.005em}
+h2{font-size:clamp(2rem,4.4vw,3.2rem);max-width:20ch}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+section{padding:96px 0}
+:focus-visible{outline:2px solid var(--gold-deep);outline-offset:3px}
+
+/* image protection */
+.protect img{-webkit-user-drag:none;user-drag:none;user-select:none;-webkit-touch-callout:none;pointer-events:none}
+.protect{-webkit-touch-callout:none;user-select:none}
+
+/* nav */
+header{position:fixed;inset:0 0 auto 0;z-index:50;display:flex;align-items:center;justify-content:space-between;padding:16px 32px;transition:background .3s,box-shadow .3s}
+header.solid{background:rgba(251,247,236,.96);box-shadow:0 1px 0 var(--gold-soft)}
+.logo{font-family:var(--serif);font-size:1.5rem;font-weight:600;color:#fff;letter-spacing:.02em}
+.logo small{font-family:var(--sans);font-weight:300;font-size:.78rem;margin-left:8px;opacity:.9}
+header.solid .logo{color:var(--ink)}
+nav{display:flex;gap:28px;align-items:center;font-size:.95rem}
+nav a{color:#fff}
+header.solid nav a{color:var(--ink)}
+nav .call{border:1px solid var(--gold);padding:8px 20px;border-radius:2px;color:#fff}
+header.solid nav .call{background:var(--gold);color:var(--ink)}
+@media(max-width:760px){nav a:not(.call){display:none}.logo small{display:none}header{padding:14px 18px}}
+
+/* hero banner */
+.hero{position:relative;min-height:100svh;padding:0;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:var(--ink)}
+.slides{position:absolute;inset:0}
+.slides img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;animation:fade 24s infinite}
+.slides img:nth-child(1){opacity:1;animation-delay:0s}
+.slides img:nth-child(2){animation-delay:6s}
+.slides img:nth-child(3){animation-delay:12s}
+.slides img:nth-child(4){animation-delay:18s}
+@keyframes fade{0%{opacity:0;transform:scale(1.06)}6%{opacity:1}25%{opacity:1}31%{opacity:0;transform:scale(1)}100%{opacity:0}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(46,38,21,.55),rgba(46,38,21,.35) 45%,rgba(46,38,21,.75))}
+.hero .inner{position:relative;z-index:2;padding:120px 24px 90px;max-width:900px}
+.hero h1{font-size:clamp(2.6rem,7vw,5.4rem);font-weight:500}
+.hero p{max-width:56ch;margin:24px auto 0;font-size:1.1rem;color:#F6EFD9}
+.cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:38px}
+.btn{display:inline-block;padding:15px 34px;border-radius:2px;font-weight:400;font-size:.98rem;border:1px solid var(--gold);cursor:pointer;font-family:var(--sans);transition:background .25s,color .25s}
+.btn.gold{background:var(--gold);color:var(--ink)}
+.btn.gold:hover{background:var(--gold-soft)}
+.btn.line{color:#fff;background:transparent}
+.btn.line:hover{background:rgba(255,255,255,.14)}
+.hero .facts{position:absolute;z-index:2;bottom:28px;left:0;right:0;display:flex;justify-content:center;gap:clamp(18px,5vw,64px);font-size:.92rem;color:var(--gold-soft);flex-wrap:wrap;padding:0 16px}
+
+/* intro */
+.intro{background:var(--cream)}
+.intro .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.intro p{color:var(--muted);font-size:1.12rem}
+@media(max-width:800px){.intro .wrap{grid-template-columns:1fr;gap:24px}}
+
+/* projects */
+.projects{background:var(--cream-2)}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:48px}
+.grid{columns:3 300px;column-gap:20px}
+.tile{position:relative;display:block;width:100%;margin:0 0 20px;break-inside:avoid;border:0;background:var(--green);padding:0;cursor:zoom-in;overflow:hidden}
+.tile img{display:block;width:100%;height:auto;transition:transform .6s}
+.tile:hover img{transform:scale(1.04)}
+.tile span{position:absolute;left:0;right:0;bottom:0;padding:44px 18px 16px;text-align:left;color:#fff;font-family:var(--serif);font-size:1.3rem;background:linear-gradient(transparent,rgba(46,38,21,.8))}
+.tile::after{content:"";position:absolute;inset:0}
+
+/* image-rich additions */
+.chips{display:flex;gap:10px;flex-wrap:wrap;margin:-20px 0 32px}
+.chip{background:none;border:1px solid var(--gold);color:var(--ink);padding:8px 20px;border-radius:30px;font:inherit;font-size:.92rem;cursor:pointer}
+.chip.on,.chip:hover{background:var(--gold);color:var(--ink)}
+.band{position:relative;min-height:70vh;padding:0;display:grid;place-items:center;text-align:center;color:#fff;overflow:hidden;background:var(--ink)}
+.band img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.band::after{content:"";position:absolute;inset:0;background:rgba(46,38,21,.5)}
+.band .in{position:relative;z-index:2;padding:80px 24px;max-width:760px}
+.band h2{max-width:none;font-size:clamp(2rem,5vw,3.6rem)}
+.band p{margin:16px auto 0;color:#F6EFD9;max-width:48ch}
+.band .btn{margin-top:30px}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:0}
+.duo div{position:relative;overflow:hidden;aspect-ratio:4/3;background:var(--green)}
+.duo img{width:100%;height:100%;object-fit:cover}
+@media(max-width:700px){.duo{grid-template-columns:1fr}}
+.tile.wide{column-span:none}
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;display:none;flex-direction:column;align-items:center;justify-content:center;background:rgba(36,29,15,.96);padding:20px}
+.lb.open{display:flex}
+.stage{position:relative;display:flex;align-items:center;justify-content:center;width:min(94vw,1300px);height:78vh}
+.stage img{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;margin:auto;display:block;border:1px solid var(--gold-soft)}
+.stage .shield{position:absolute;inset:0}
+.stage .mark{position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;font-family:var(--serif);font-size:clamp(2rem,7vw,5rem);color:rgba(255,255,255,.12);transform:rotate(-14deg);letter-spacing:.08em}
+.cap{margin-top:16px;text-align:center;color:var(--gold-soft);font-family:var(--serif);font-size:1.3rem}
+.cap small{display:block;font-family:var(--sans);font-size:.85rem;color:#D9CFB0}
+.lb button.nav,.lb button.x{position:absolute;background:none;border:1px solid var(--gold);color:var(--gold-soft);width:48px;height:48px;font-size:1.5rem;cursor:pointer;border-radius:50%}
+.lb button:hover{background:var(--gold);color:var(--ink)}
+.x{top:18px;right:18px}.prev{left:18px;top:50%}.next{right:18px;top:50%}
+@media(max-width:700px){.prev,.next{top:auto;bottom:18px}.stage{height:70vh}}
+
+/* services */
+.services{background:var(--green)}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px;margin-top:48px;background:var(--green-deep)}
+.card{background:var(--cream);padding:36px 28px}
+.card h3{font-size:1.6rem;margin-bottom:10px;color:var(--gold-deep)}
+.card p{font-size:.98rem;color:var(--muted)}
+
+/* process */
+.steps{list-style:none;margin-top:48px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:28px;counter-reset:s}
+.steps li{counter-increment:s;border-top:2px solid var(--gold);padding-top:18px}
+.steps li::before{content:counter(s);font-family:var(--serif);font-size:2.4rem;color:var(--gold-deep);display:block;line-height:1}
+.steps b{font-family:var(--serif);font-size:1.4rem;font-weight:500;display:block;margin:8px 0 4px}
+.steps span{font-size:.95rem;color:var(--muted)}
+
+/* proof */
+.proof{background:var(--cream-2);text-align:center}
+.proof blockquote{font-family:var(--serif);font-size:clamp(1.5rem,3vw,2.2rem);line-height:1.35;max-width:30ch;margin:0 auto 20px}
+.proof cite{font-style:normal;color:var(--gold-deep)}
+.proof .two{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:32px;margin-top:64px;text-align:left}
+.proof h3{font-size:1.5rem;margin-bottom:6px}
+.proof .two p{font-size:.98rem;color:var(--muted)}
+
+/* form */
+.contact .wrap{display:grid;grid-template-columns:1fr 1.2fr;gap:64px;align-items:start}
+.contact .info p{color:var(--muted);margin-top:18px}
+.contact .info a{display:block;color:var(--gold-deep);margin-top:14px;font-size:1.1rem}
+form{background:var(--cream-2);padding:36px;border-top:3px solid var(--gold);display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form .full{grid-column:1/-1}
+label{font-size:.9rem;color:var(--muted);display:block}
+input,select,textarea{width:100%;margin-top:6px;padding:12px 14px;background:var(--cream);border:1px solid var(--gold-soft);border-radius:2px;font:inherit;color:var(--ink)}
+textarea{min-height:96px;resize:vertical}
+.hp{position:absolute;left:-9999px}
+#msg{grid-column:1/-1;font-size:.95rem;min-height:1.4em}
+@media(max-width:860px){.contact .wrap{grid-template-columns:1fr;gap:36px}form{grid-template-columns:1fr;padding:24px}}
+
+footer{background:var(--ink);color:#D9CFB0;padding:40px 0;font-size:.9rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wa{position:fixed;right:18px;bottom:18px;z-index:40;background:var(--green-deep);color:#fff;padding:13px 22px;border-radius:40px;font-size:.95rem}
+@media(prefers-reduced-motion:reduce){.slides img{animation:none}.slides img:nth-child(1){opacity:1}html{scroll-behavior:auto}.tile img{transition:none}}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <a class="logo" href="#top">Traansformation<small>Design Studio</small></a>
+  <nav>
+    <a href="#projects">Projects</a><a href="#services">Services</a><a href="#process">Process</a><a href="#consultation">Consultation</a>
+    <a class="call" href="tel:+919136315733">Call studio</a>
+  </nav>
+</header>
+
+<!-- Landing banner -->
+<section class="hero protect" aria-label="Welcome">
+  <div class="slides" aria-hidden="true">
+    <img src="assets/projects/01-dosti.jpg" alt="" draggable="false">
+    <img src="assets/projects/03-luxe-elegance-thane.jpg" alt="" draggable="false">
+    <img src="assets/projects/05-wadhwa-courtyard.jpg" alt="" draggable="false">
+    <img src="assets/projects/02-serene-apartment-goregaon.jpg" alt="" draggable="false">
+  </div>
+  <div class="inner">
+    <h1>Homes designed with quiet luxury, built with care</h1>
+    <p>Bespoke interiors and turnkey execution for homes and workspaces across Thane and Mumbai, led by the designers themselves.</p>
+    <div class="cta">
+      <a class="btn gold" href="#consultation">Book a free consultation</a>
+      <a class="btn line" href="#projects">View our projects</a>
+    </div>
+  </div>
+  <div class="facts"><span>10+ years of practice</span><span>Design to handover</span><span>Vastu-aware planning</span></div>
+</section>
+
+<section class="intro">
+  <div class="wrap">
+    <h2>A calmer way to get a beautiful home built.</h2>
+    <p>A great interior needs more than good pictures. It needs a clear brief, honest material choices, tight site coordination and finishes that last through daily life. We handle all of it under one accountable team, so you always know what is happening and what it costs.</p>
+  </div>
+</section>
+
+<section class="band protect" aria-label="Luxury bathroom in Thane">
+  <img src="assets/projects/03-luxe-elegance-thane.jpg" alt="Luxury bathroom in Thane" loading="lazy" draggable="false">
+  <div class="in"><h2>Every detail, considered.</h2><p>Premium finishes, precise detailing and calm, practical planning for homes across Thane and Mumbai.</p><a class="btn gold" href="#consultation">Book a free consultation</a></div>
+</section>
+
+<section class="projects" id="projects">
+  <div class="wrap">
+    <div class="head">
+      <h2>Real projects, built and handed over.</h2>
+      <a class="btn gold" href="#consultation">Start a similar project</a>
+    </div>
+    <div class="chips" id="chips"></div>
+    <div class="grid protect" id="grid"></div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <h2>One studio for design and site execution.</h2>
+    <div class="cards">
+      <div class="card"><h3>Residential interiors</h3><p>Living rooms, kitchens, bedrooms, storage, lighting and material palettes for apartments and premium homes.</p></div>
+      <div class="card"><h3>Turnkey execution</h3><p>Civil, carpentry, electrical, ceiling and finishing work coordinated by one accountable team.</p></div>
+      <div class="card"><h3>Commercial spaces</h3><p>Offices, food outlets and hospitality spaces planned and built to run well from day one.</p></div>
+      <div class="card"><h3>Design consultation</h3><p>Layout, budget, Vastu and material advice before you commit to execution.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <div class="wrap">
+    <h2>Every step is clear before it begins.</h2>
+    <ol class="steps">
+      <li><b>Consultation</b><span>We learn your lifestyle, property, budget and timeline.</span></li>
+      <li><b>Design and estimate</b><span>Layouts, material direction and a clear scope of work.</span></li>
+      <li><b>Approval</b><span>Drawings, finishes, budget and phasing agreed in writing.</span></li>
+      <li><b>Execution</b><span>Site teams, vendors and quality checks managed to completion.</span></li>
+      <li><b>Handover</b><span>Final review, finishing touches, cleaning and a ready-to-use home.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="proof">
+  <div class="wrap">
+    <blockquote>From start to finish, it was a spectacular experience. The team transformed our house into a simple, authentic yet modern home.</blockquote>
+    <cite>Mrs. Shreya Murdeshwar, Raheja Gardens, Thane</cite>
+    <div class="two">
+      <div><h3>Led by the principals</h3><p>Hiralal Vishwakarma and Manjusha Shresth guide your design choices and site decisions personally.</p></div>
+      <div><h3>Built to last</h3><p>We choose durable materials and practical planning first, then layer in the detail that makes a home feel yours.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="band protect" aria-label="Mulund apartment bedroom">
+  <img src="assets/projects/07-atmosphere-mulund.jpg" alt="Mulund apartment bedroom" loading="lazy" draggable="false">
+  <div class="in"><h2>Tell us about your home. We will do the rest.</h2><p>From first sketch to final handover, one team looks after your design and your site.</p><a class="btn gold" href="#consultation">Get a free design call</a></div>
+</section>
+
+<section class="duo protect" aria-label="More work">
+  <div><img src="assets/projects/04-tranquil-apartment-thane.jpg" alt="Modern kitchen in Thane" loading="lazy" draggable="false"></div>
+  <div><img src="assets/projects/06-lakshmi-shrushti.jpg" alt="Bedroom with custom wardrobe" loading="lazy" draggable="false"></div>
+</section>
+
+<section class="contact" id="consultation">
+  <div class="wrap">
+    <div class="info">
+      <h2>Tell us about your space.</h2>
+      <p>Share a few details and we will call or WhatsApp you with the next step. The consultation is free.</p>
+      <a href="tel:+919136315733">+91 91363 15733</a>
+      <a href="mailto:traansformation@gmail.com">traansformation@gmail.com</a>
+    </div>
+    <form id="lead" novalidate>
+      <label>Name<input name="name" required autocomplete="name"></label>
+      <label>Phone<input name="phone" type="tel" required autocomplete="tel"></label>
+      <label>Property type
+        <select name="property"><option>2BHK / 3BHK home</option><option>Luxury apartment</option><option>Villa / bungalow</option><option>Office / commercial</option><option>Renovation</option></select></label>
+      <label>Location<input name="location" autocomplete="address-level2"></label>
+      <label>Estimated budget
+        <select name="budget"><option>Need guidance</option><option>Under 10 lakh</option><option>10 to 25 lakh</option><option>25 to 50 lakh</option><option>50 lakh plus</option></select></label>
+      <label>Project timeline
+        <select name="timeline"><option>Immediately</option><option>1 to 3 months</option><option>3 to 6 months</option><option>Planning early</option></select></label>
+      <label class="full">What would you like designed?<textarea name="details"></textarea></label>
+      <input class="hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <button class="btn gold full" type="submit">Get free consultation</button>
+      <p id="msg" role="status"></p>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap"><span>&copy; Traansformation Design Studio</span><span>Office 18, Ajit Shopping Centre, L.B.S. Marg, Thane (W) 400602</span></div></footer>
+<a class="wa" href="https://wa.me/919136315733?text=Hi%20Traansformation%2C%20I%20would%20like%20to%20discuss%20an%20interior%20design%20project." target="_blank" rel="noopener">WhatsApp us</a>
+
+<!-- Lightbox: full image, centred -->
+<div class="lb protect" id="lb" role="dialog" aria-modal="true" aria-label="Project preview">
+  <button class="x" aria-label="Close">&times;</button>
+  <button class="nav prev" aria-label="Previous">&#8249;</button>
+  <div class="stage"><img id="lbimg" alt="" draggable="false"><div class="shield"></div><div class="mark">Traansformation</div></div>
+  <button class="nav next" aria-label="Next">&#8250;</button>
+  <div class="cap" id="cap"></div>
+</div>
+
+<script>
+/* Paste your Formspree / Web3Forms / Apps Script URL here to receive leads by email. */
+var FORM_ENDPOINT = "";
+
+var hdr=document.getElementById('top');
+function onScroll(){hdr.classList.toggle('solid',scrollY>40)}
+addEventListener('scroll',onScroll,{passive:true});onScroll();
+
+/* image protection: block right-click, drag, long-press save on images */
+['contextmenu','dragstart'].forEach(function(e){
+  document.addEventListener(e,function(ev){if(ev.target.closest('.protect, img'))ev.preventDefault()});
+});
+
+/* lightbox */
+var DATA=[
+ ['01-dosti.jpg','Dosti Residence','Bedroom with custom wall art and upholstered bed','Bedrooms'],
+ ['03-luxe-elegance-thane.jpg','Where Luxe Meets Elegance','Luxury bathroom with glass shower and stone finishes','Kitchens & bathrooms'],
+ ['02-serene-apartment-goregaon.jpg','The Serene Apartment','Goregaon apartment bedroom with custom headboard','Bedrooms'],
+ ['05-wadhwa-courtyard.jpg','Wadhwa Courtyard','Bedroom with arched wall detail','Bedrooms'],
+ ['04-tranquil-apartment-thane.jpg','The Tranquil Apartment','Modern kitchen with warm under-cabinet lighting','Kitchens & bathrooms'],
+ ['06-lakshmi-shrushti.jpg','Lakshmi Shrushti','Bedroom with custom wardrobe','Bedrooms'],
+ ['07-atmosphere-mulund.jpg','Atmosphere, Mulund','Mulund bedroom with textured wall and mirror panel','Bedrooms'],
+ ['08-rustic-kingdom.jpg','The Rustic Kingdom','Rustic bedroom with layered textiles','Bedrooms']
+]; /* To add a project: upload the photo to assets/projects/ and add one line here. */
+var tiles=[],lb=document.getElementById('lb'),
+    lbimg=document.getElementById('lbimg'),cap=document.getElementById('cap'),cur=0,opener=null;
+function show(i){cur=(i+tiles.length)%tiles.length;var t=tiles[cur].querySelector('img');
+  lbimg.src=t.src;lbimg.alt=t.alt;cap.innerHTML=tiles[cur].querySelector('span').textContent+'<small>'+t.alt+'</small>'}
+function open(i){opener=tiles[i];show(i);lb.classList.add('open');document.body.style.overflow='hidden';lb.querySelector('.x').focus()}
+function close(){lb.classList.remove('open');document.body.style.overflow='';if(opener)opener.focus()}
+var grid=document.getElementById('grid'),chips=document.getElementById('chips');
+function render(cat){
+  grid.innerHTML=DATA.filter(function(d){return cat==='All'||d[3]===cat}).map(function(d,i){
+    return '<button class="tile" data-i="'+i+'"><img src="assets/projects/'+d[0]+'" alt="'+d[2]+'" loading="lazy" draggable="false"><span>'+d[1]+'</span></button>'}).join('');
+  tiles=[].slice.call(grid.querySelectorAll('.tile'));
+  tiles.forEach(function(t,i){t.addEventListener('click',function(){open(i)})});
+}
+var cats=['All'].concat(DATA.map(function(d){return d[3]}).filter(function(c,i,a){return a.indexOf(c)===i}));
+chips.innerHTML=cats.map(function(c,i){return '<button class="chip'+(i?'':' on')+'">'+c+'</button>'}).join('');
+chips.addEventListener('click',function(e){var b=e.target.closest('.chip');if(!b)return;
+  [].forEach.call(chips.children,function(x){x.classList.toggle('on',x===b)});render(b.textContent)});
+render('All');
+lb.querySelector('.x').onclick=close;
+lb.querySelector('.prev').onclick=function(){show(cur-1)};
+lb.querySelector('.next').onclick=function(){show(cur+1)};
+lb.addEventListener('click',function(e){if(e.target===lb||e.target.classList.contains('shield'))close()});
+addEventListener('keydown',function(e){if(!lb.classList.contains('open'))return;
+  if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+
+/* enquiry form */
+document.getElementById('lead').addEventListener('submit',function(e){
+  e.preventDefault();var f=e.target,m=document.getElementById('msg'),d=new FormData(f);
+  if(d.get('website'))return;
+  if(!d.get('name')||!/^[+\d][\d\s-]{7,}$/.test((d.get('phone')||'').trim())){m.textContent='Please enter your name and a valid phone number.';return}
+  var text='Hi Traansformation, I would like a consultation.%0AName: '+encodeURIComponent(d.get('name'))+'%0APhone: '+encodeURIComponent(d.get('phone'))+
+    '%0AProperty: '+encodeURIComponent(d.get('property'))+'%0ALocation: '+encodeURIComponent(d.get('location'))+
+    '%0ABudget: '+encodeURIComponent(d.get('budget'))+'%0ATimeline: '+encodeURIComponent(d.get('timeline'))+'%0ADetails: '+encodeURIComponent(d.get('details'));
+  if(!FORM_ENDPOINT){window.open('https://wa.me/919136315733?text='+text,'_blank');m.textContent='Opening WhatsApp so you can send your details.';return}
+  m.textContent='Sending...';
+  fetch(FORM_ENDPOINT,{method:'POST',headers:{'Accept':'application/json'},body:d})
+    .then(function(r){if(!r.ok)throw 0;f.reset();m.textContent='Thank you. We will call or WhatsApp you shortly.'})
+    .catch(function(){m.innerHTML='Could not send. Please <a href="https://wa.me/919136315733?text='+text+'" target="_blank" rel="noopener" style="color:var(--gold-deep)">send on WhatsApp</a> or call +91 91363 15733.'});
+});
+</script>
+</body>
+</html>
